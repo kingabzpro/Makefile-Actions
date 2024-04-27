@@ -1,0 +1,27 @@
+name: Data Processing and Analysis
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Packages
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Format
+        run: black *.py --line-length 88
+      - name: Data Processing
+        env:
+          RAW_DATA_DIR: "./raw_data/WHR2023.csv"
+        run: python data_processing.py $RAW_DATA_DIR
+      - name: Data Analysis
+        env:
+          CLEAN_DATA_DIR: "./processed_data/WHR2023_cleaned.csv"
+        run: python data_analysis.py $CLEAN_DATA_DIR
