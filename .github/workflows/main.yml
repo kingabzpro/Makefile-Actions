@@ -19,7 +19,7 @@ jobs:
         run: black *.py --line-length 88
       - name: Data Processing
         env:
-          RAW_DATA_DIR: "./raw_data/WHR2023.csv"
+          RAW_DATA_DIR: "./raw_data/WHR2023...csv"
         run: python data_processing.py $RAW_DATA_DIR
       - name: Data Analysis
         env:
