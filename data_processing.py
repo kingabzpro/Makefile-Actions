@@ -1,9 +1,18 @@
-import pandas as pd
+import sys
 
+import pandas as pd
 
 # Load the dataset
 df = pd.read_csv("raw_data\WHR2023.csv")
 
+# Check if the data location argument is provided
+if len(sys.argv) != 2:
+    print("Usage: python data_processing.py <data_location>")
+    sys.exit(1)
+
+
+# Load the clean dataset
+df = pd.read_csv(sys.argv[1])
 
 # Rename columns to more descriptive names
 df.columns = [
@@ -36,8 +45,6 @@ df.fillna(df.mean(numeric_only=True), inplace=True)
 # Check for missing values after cleaning
 print("Missing values after cleaning:")
 print(df.isnull().sum())
-
-
 
 
 print(df.head())

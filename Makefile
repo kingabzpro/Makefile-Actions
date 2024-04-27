@@ -2,7 +2,7 @@ RAW_DATA_PATH = "raw_data/WHR2023.csv"
 PROCESSED_DATA = "processed_data/WHR2023_cleaned.csv"
 
 install:
-	C:\Users\abida\anaconda3\python.exe -m pip install --upgrade pip &&\
+	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
 format:
