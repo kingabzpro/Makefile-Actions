@@ -78,7 +78,7 @@ plt.savefig("figures/social_support_happiness_relationship.png")
 
 
 # Heatmap of correlations between variables
-corr_matrix = df.corr()
+corr_matrix = df.drop("Country",axis=1).corr()
 plt.figure(figsize=(12, 10))
 sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", square=True)
 plt.title("Correlation Heatmap")
