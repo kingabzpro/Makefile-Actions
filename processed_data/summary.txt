@@ -1,0 +1,55 @@
+
+## Data Summary
+
+       Happiness Score  Happiness Score Error  ...  Perceptions of Corruption.1  Dystopia Residual
+count       137.000000             137.000000  ...                   137.000000         137.000000
+mean          5.539796               0.064715  ...                     0.145898           1.777838
+std           1.139929               0.023031  ...                     0.126723           0.502532
+min           1.859000               0.029000  ...                     0.000000          -0.110000
+25%           4.724000               0.047000  ...                     0.060000           1.556000
+50%           5.684000               0.060000  ...                     0.111000           1.845000
+75%           6.334000               0.077000  ...                     0.187000           2.078000
+max           7.804000               0.147000  ...                     0.561000           2.955000
+
+[8 rows x 18 columns]
+
+## Data Info
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 137 entries, 0 to 136
+Data columns (total 19 columns):
+ #   Column                          Non-Null Count  Dtype  
+---  ------                          --------------  -----  
+ 0   Country                         137 non-null    object 
+ 1   Happiness Score                 137 non-null    float64
+ 2   Happiness Score Error           137 non-null    float64
+ 3   Upper Whisker                   137 non-null    float64
+ 4   Lower Whisker                   137 non-null    float64
+ 5   GDP per Capita                  137 non-null    float64
+ 6   Social Support                  137 non-null    float64
+ 7   Healthy Life Expectancy         137 non-null    float64
+ 8   Freedom to Make Life Choices    137 non-null    float64
+ 9   Generosity                      137 non-null    float64
+ 10  Perceptions of Corruption       137 non-null    float64
+ 11  Dystopia Happiness Score        137 non-null    float64
+ 12  GDP per Capita.1                137 non-null    float64
+ 13  Social Support.1                137 non-null    float64
+ 14  Healthy Life Expectancy.1       137 non-null    float64
+ 15  Freedom to Make Life Choices.1  137 non-null    float64
+ 16  Generosity.1                    137 non-null    float64
+ 17  Perceptions of Corruption.1     137 non-null    float64
+ 18  Dystopia Residual               137 non-null    float64
+dtypes: float64(18), object(1)
+memory usage: 20.5+ KB
+
+
+## Dataframe
+
+       Country  Happiness Score  Happiness Score Error  ...  Generosity.1  Perceptions of Corruption.1  Dystopia Residual
+0      Finland            7.804                  0.036  ...         0.126                        0.535              2.363
+1      Denmark            7.586                  0.041  ...         0.208                        0.525              2.084
+2      Iceland            7.530                  0.049  ...         0.250                        0.187              2.250
+3       Israel            7.473                  0.032  ...         0.124                        0.158              2.691
+4  Netherlands            7.403                  0.029  ...         0.251                        0.394              2.110
+
+[5 rows x 19 columns]
