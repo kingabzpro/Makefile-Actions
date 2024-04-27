@@ -6,11 +6,14 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: iterative/setup-cml@v3
       - name: Install Packages
         run: make install
       - name: Format
@@ -23,3 +26,7 @@ jobs:
         env:
           CLEAN_DATA_DIR: "./processed_data/WHR2023_cleaned.csv"
         run: make analyze PROCESSED_DATA=$CLEAN_DATA_DIR
+      - name: Data Summary
+        env:
+          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: make summary
