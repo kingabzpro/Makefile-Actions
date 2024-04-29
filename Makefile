@@ -11,7 +11,7 @@ format:
 process: data_processing.py
 		python data_processing.py $(RAW_DATA_PATH)
 
-analyze: data_processing.py
+analyze: data_analysis.py
 		python data_analysis.py $(PROCESSED_DATA)
 
 summary:
