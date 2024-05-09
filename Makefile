@@ -1,5 +1,5 @@
-RAW_DATA_PATH = "raw_data/WHR2023.csv"
-PROCESSED_DATA = "processed_data/WHR2023_cleaned.csv"
+RAW_DATA_PATH = raw_data/WHR2023.csv
+PROCESSED_DATA = processed_data/WHR2023_cleaned.csv
 
 install:
 	pip install --upgrade pip &&\
@@ -8,10 +8,10 @@ install:
 format:
 		black *.py --line-length 88
 
-process: ./raw_data/WHR2023.csv
+process: $(RAW_DATA_PATH)
 		python data_processing.py $(RAW_DATA_PATH)
 
-analyze: ./processed_data/WHR2023_cleaned.csv
+analyze: $(PROCESSED_DATA)
 		python data_analysis.py $(PROCESSED_DATA)
 
 summary: ./processed_data/summary.txt

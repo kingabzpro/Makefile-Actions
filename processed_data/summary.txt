@@ -45,11 +45,11 @@ memory usage: 20.5+ KB
 
 ## Dataframe
 
-       Country  Happiness Score  Happiness Score Error  ...  Generosity.1  Perceptions of Corruption.1  Dystopia Residual
-0      Finland            7.804                  0.036  ...         0.126                        0.535              2.363
-1      Denmark            7.586                  0.041  ...         0.208                        0.525              2.084
-2      Iceland            7.530                  0.049  ...         0.250                        0.187              2.250
-3       Israel            7.473                  0.032  ...         0.124                        0.158              2.691
-4  Netherlands            7.403                  0.029  ...         0.251                        0.394              2.110
+       Country  Happiness Score  ...  Perceptions of Corruption.1  Dystopia Residual
+0      Finland            7.804  ...                        0.535              2.363
+1      Denmark            7.586  ...                        0.525              2.084
+2      Iceland            7.530  ...                        0.187              2.250
+3       Israel            7.473  ...                        0.158              2.691
+4  Netherlands            7.403  ...                        0.394              2.110
 
 [5 rows x 19 columns]
