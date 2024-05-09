@@ -8,13 +8,13 @@ install:
 format:
 		black *.py --line-length 88
 
-process: data_processing.py
+process: ./raw_data/WHR2023.csv
 		python data_processing.py $(RAW_DATA_PATH)
 
-analyze: data_analysis.py
+analyze: ./processed_data/WHR2023_cleaned.csv
 		python data_analysis.py $(PROCESSED_DATA)
 
-summary:
+summary: ./processed_data/summary.txt
 	echo "# Data Summary" > report.md
 	cat ./processed_data/summary.txt >> report.md
 	
